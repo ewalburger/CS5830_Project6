@@ -9,3 +9,28 @@
 * Simply run `pip install -r requirements.txt` in your desired python env to install dependencies.
     * Note in vs-code when setting up the kernel for the Jupyter notebook, it auto recognizes the [`requirements.txt`](./requirements.txt) file if present, and you just have to click to use it for your python venv that it creates for you.
 * Be sure to re-generate [`requirements.txt`](./requirements.txt) whenever you install a new package, it does not regenerate automatically.
+
+## Evapotranspiration Research
+
+Evapotranspiration can be defined as "The combined processes through which water is transferred to the atmosphere from open water and ice surfaces, bare soil and vegetation that make up the Earth's surface."
+
+Levels of evapotranspiration in a given area are primarily controlled by three factors. 
+
+1. The amount of water present which includes the amount of available water in both the soil and in larger bodies of water.
+2. The amount of energy present in the air and soil (e.g. heat, measured by the global surface temperature)
+3. The ability of the atmosphere to take up water (humidity) which can cause the air temperature to vary from location to location and therefore lead to an increase of decrease in total evapotranspiration
+
+Global warming has increased evapotranspiration in recent years, so if we see an increase for this water source, that might be why.
+
+## Data-driven methods to improve baseflow prediction of a regional groundwater model notes
+
+* the goal of the paper is to provide a framework for improving the predictive accuracy of predictive groundwater models. Which sounds promising since that's basically what we're doing here.
+* Republican River Basin: this is our data set. A regional groundwater flow model was developed to assess the impact of ground-water pumping for irrigation.
+* baseflow represents the net groundwater discharge to nearby streams and rivers.
+* baseflow is a really important metric when looking at water supply reliability
+physically-based models of groundwater flow are powerful tools to simulate and predict baseflow under varying conditions.
+* predictions made from groundwater models are subject to error and uncertainty.
+* The assumptions made in order to do least squares regression to make groundwater models are violated by the structural errors that are always a part of the data. a.k.a you can't make a good model using least squares regression for groundwater models
+* you need to properly treat model residuals in order to reliably assess predictive uncertainty. You need to estimate the error model
+* The study in the paper uses a postprocessor approach to estimate the error model, which has proven to be an effective way to do this.
+* locally weighted regression has been successfully applied to uncertainty analysis of rainfall-runoff models
