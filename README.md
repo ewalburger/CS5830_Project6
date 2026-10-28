@@ -34,3 +34,17 @@ physically-based models of groundwater flow are powerful tools to simulate and p
 * you need to properly treat model residuals in order to reliably assess predictive uncertainty. You need to estimate the error model
 * The study in the paper uses a postprocessor approach to estimate the error model, which has proven to be an effective way to do this.
 * locally weighted regression has been successfully applied to uncertainty analysis of rainfall-runoff models
+
+Section 4 RRCA model case study
+* The RRCA model was developed in 2002 and updated annually to resolve the water conflicts and litigation among the states as growing water demand for
+irrigation and other uses led to dramatically increased groundwater pumping and decline in streamflow.
+* evapotranspiration rates calibrated based on head measurements at over 10,000 wells
+* streamflow data estimated at 65 gages
+* Database includes data from1918 to 2007
+* The calibrated RRCA model is used to simulate baseflow under pumping and no pumping conditions
+* the paper is exploring the potential ofusing data-driven methods to improve baseflow prediction of the RRCA model
+* baseflow  estimates are considered "observations" because there were no direct measurements of baseflow
+* the top right paragraph on page 129 talks about characteristics of the dataset.
+  I can't tell if these are things that the study changed, or if they're implicit in the dataset. We should maybe check though because its all the ways the dataset has been simplified and cleaned
+* they used 1941-1989 to train their data and then 1990-2000 for validation
+* In the paper they used their model to create predictive intervals of baseflow, since baseflow changes depending on the time of year.
